@@ -7,7 +7,7 @@ const userNameSchema = new Schema({
 });
 
 const facultySchema = new Schema<TFaculty>({
-  id: { type: String, required: true },
+  id: { type: String, required: true, unique: true },
   user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   name: { type: userNameSchema, required: true },
   gender: {
