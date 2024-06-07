@@ -9,6 +9,8 @@ import { User } from './user.model';
 import { generateStudentId } from './user.utils';
 import httpStatus from 'http-status';
 import AppError from './../../errors/AppError';
+import { TFaculty } from '../faculty/faculty.interface';
+import Faculty from '../faculty/faculty.model';
 
 const createStudentIntoDB = async (password: string, payload: TStudent) => {
   // create a user object
@@ -63,6 +65,13 @@ const createStudentIntoDB = async (password: string, payload: TStudent) => {
   }
 };
 
+const createFacultyIntoDB = async (password: string, payload: TFaculty) => {
+  console.log(password, payload);
+  const result = Faculty.create(payload);
+  return result;
+};
+
 export const UserServices = {
   createStudentIntoDB,
+  createFacultyIntoDB,
 };
