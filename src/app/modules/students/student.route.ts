@@ -14,7 +14,7 @@ router.get('/:studentId', StudentControllers.getSingleStudent);
 
 router.patch(
   '/:studentId',
-  //   validateRequest(StudentValidations.updateStudentValidationSchema),
+  validateRequest(StudentValidations.updateStudentValidationSchema),
   StudentControllers.updateStudent,
 );
 
