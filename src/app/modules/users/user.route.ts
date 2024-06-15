@@ -1,6 +1,6 @@
 import { UserControllers } from './user.controller';
 import { StudentValidations } from '../students/student.validation';
-import validateRequest from '../../middlwares/validateRequest';
+import validateRequest from '../../middlewares/validateRequest';
 import express from 'express';
 import { AdminValidations } from '../admin/admin.validation';
 
